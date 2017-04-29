@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="udemi_first" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +20,54 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSt-98-JeA">
+                                <rect key="frame" x="164" y="339" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="myAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u7o-v3-iAG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=".........." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beB-kw-3Ar">
+                                <rect key="frame" x="164" y="71" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EXb-Z4-qMd">
+                                <rect key="frame" x="139" y="222" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Vj-Y5-bNB">
+                                <rect key="frame" x="139" y="169" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="68h-FF-pyN"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EXb-Z4-qMd" firstAttribute="top" secondItem="8Vj-Y5-bNB" secondAttribute="bottom" constant="23" id="1Yi-fp-aSz"/>
+                            <constraint firstItem="8Vj-Y5-bNB" firstAttribute="top" secondItem="beB-kw-3Ar" secondAttribute="bottom" constant="77" id="1nb-et-I11"/>
+                            <constraint firstItem="beB-kw-3Ar" firstAttribute="leading" secondItem="DSt-98-JeA" secondAttribute="leading" id="37o-6s-gDH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DSt-98-JeA" secondAttribute="bottom" constant="298" id="3jF-uY-7Fa"/>
+                            <constraint firstItem="8Vj-Y5-bNB" firstAttribute="trailing" secondItem="EXb-Z4-qMd" secondAttribute="trailing" id="9aQ-rS-5vG"/>
+                            <constraint firstItem="beB-kw-3Ar" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="51" id="Ecr-Pc-Ha2"/>
+                            <constraint firstItem="DSt-98-JeA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O7P-Wd-daO"/>
+                            <constraint firstItem="8Vj-Y5-bNB" firstAttribute="leading" secondItem="EXb-Z4-qMd" secondAttribute="leading" id="ZDm-Sy-AQk"/>
+                            <constraint firstItem="8Vj-Y5-bNB" firstAttribute="centerX" secondItem="beB-kw-3Ar" secondAttribute="centerX" id="cBp-ic-8d0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="coolLabel" destination="beB-kw-3Ar" id="ser-Lt-L0K"/>
+                        <outlet property="inPut1" destination="8Vj-Y5-bNB" id="mWd-qQ-nTo"/>
+                        <outlet property="inPut2" destination="EXb-Z4-qMd" id="oae-ez-ubs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
