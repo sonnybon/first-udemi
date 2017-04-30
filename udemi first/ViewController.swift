@@ -9,11 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBAction func myAction(_ sender: Any) {
         
-        print(inPut1.text!)
-        print(inPut2.text!)
+        let adddition = false
+        
+        if adddition {
+        
+        coolLabel.text = "is \(Double(inPut1.text!)! + Double(inPut2.text!)!)"
+        } else {
+            coolLabel.text = "is \(Double(inPut1.text!)! - Double(inPut2.text!)!)"
+        }
     }
     
     @IBOutlet weak var coolLabel: UILabel!
@@ -23,12 +29,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
